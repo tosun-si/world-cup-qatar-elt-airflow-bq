@@ -1,0 +1,12 @@
+{
+  "world_cup_qatar_elt_bq": {
+    "feature_name": "world_cup_qatar_elt_bq",
+    "team_players_stats_raw_write_disposition": "WRITE_APPEND",
+    "team_players_stats_raw_create_disposition": "CREATE_NEVER",
+    "dataset": "world_cup_qatar_elt_bq",
+    "team_players_stat_input_bucket": "mazlum_dev",
+    "team_players_stat_source_object": "airflow/world_cup_qatar_elt_bq/*.json",
+    "team_players_stat_table": "team_players_stat",
+    "team_players_stat_raw_table": "team_players_stat_raw"
+  }
+}
