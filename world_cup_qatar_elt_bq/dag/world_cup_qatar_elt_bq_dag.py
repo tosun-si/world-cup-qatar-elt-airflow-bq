@@ -28,14 +28,14 @@ def execute_bq_job(query_path: str,
                 "useLegacySql": False
             }
         },
-        location='EU'
+        location='europe-west1'
     )
 
 
 with airflow.DAG(
         "team_league_elt",
         default_args=settings.dag_default_args,
-        schedule_interval=None) as dag:
+        schedule=None) as dag:
     load_team_stats_raw_to_bq = GCSToBigQueryOperator(
         task_id='load_team_stats_raw_to_bq',
         bucket=settings.variables['team_players_stat_input_bucket'],
